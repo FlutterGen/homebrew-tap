@@ -7,11 +7,9 @@ class FlutterGen < Formula
 
   if OS.mac?
     url "https://github.com/wasabeef/flutter_gen/releases/download/#{version}/fluttergen-macos.tar.gz"
-    # url "https://github.com/FlutterGen/flutter_gen/releases/download/#{version}/fluttergen-macos.tar.gz"
     sha256 "7af5c2cf320e7aa188ed787cddeceb1b72f559454b1cb407680c17ab0694218f"
   elsif OS.linux?
     url "https://github.com/wasabeef/flutter_gen/releases/download/#{version}/fluttergen-linux.tar.gz"
-    # url "https://github.com/FlutterGen/flutter_gen/releases/download/#{version}/fluttergen-linux.tar.gz"
     sha256 "52bedcb37484060171bef4dae666d9535c94caa268eb65fb31a2c1fc9ae2ad29"
   end
 
