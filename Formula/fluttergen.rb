@@ -1,5 +1,5 @@
 class Fluttergen < Formula
-  version "v3.1.0"
+  version "v3.1.1"
   desc "A command-line tool for The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs. by Dart."
   homepage "https://github.com/FlutterGen/flutter_gen"
 
@@ -7,10 +7,10 @@ class Fluttergen < Formula
 
   if OS.mac?
     url "https://github.com/FlutterGen/flutter_gen/releases/download/#{version}/fluttergen-macos.tar.gz"
-    sha256 "d5ba613d735c2d191e66b50671edb4b9637795c3873144f4a318780a51ce69d1"
+    sha256 "a457cdda5abf635131586e6dd0b288e9fde7a99c093d9cd382913cb7a49c5192"
   elsif OS.linux?
     url "https://github.com/FlutterGen/flutter_gen/releases/download/#{version}/fluttergen-linux.tar.gz"
-    sha256 "96cad6c97600d09d906c289a94daa011f5b801667713e4cde4a69bfa349be9c2"
+    sha256 "bae635dd14424885fb7a341027017cf42fa2239409b009f57db08d24b02f5f6c"
   end
 
   def install
