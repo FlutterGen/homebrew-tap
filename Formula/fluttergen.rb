@@ -1,5 +1,5 @@
 class Fluttergen < Formula
-  version "v3.1.2"
+  version "v4.0.0"
   desc "A command-line tool for The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs. by Dart."
   homepage "https://github.com/FlutterGen/flutter_gen"
 
