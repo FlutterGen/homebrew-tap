@@ -3,8 +3,6 @@ class Fluttergen < Formula
   desc "A command-line tool for The Flutter code generator for your assets, fonts, colors, … — Get rid of all String-based APIs. by Dart."
   homepage "https://github.com/FlutterGen/flutter_gen"
 
-  bottle :unneeded
-
   if OS.mac?
     url "https://github.com/FlutterGen/flutter_gen/releases/download/#{version}/fluttergen-macos.tar.gz"
     sha256 "a1de20ee83d747e12092a87909eb7ca7a3756060e7b677fe26711a3ccb5a72c9"
