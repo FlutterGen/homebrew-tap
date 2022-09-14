@@ -26,4 +26,14 @@ jobs:
           -e 's/{{ version }}/${{ github.event.client_payload.version }}/g' \
           -e 's/{{ sha256_linux }}/${{ github.event.client_payload.sha256_linux }}/g' \
           -e 's/{{ sha256_macos }}/${{ github.event.client_payload.sha256_macos }}/g' \
-          fluttergen_template.rb
+          fluttergen_template.rb > Formula/fluttergen.rb
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.PAT_FLUTTERGEN }}
+          commit-message: "feat: update"
+          branch: update-tap
+          delete-branch: true
+          title: "feat: update"
