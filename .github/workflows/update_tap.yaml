@@ -1,0 +1,28 @@
+name: Update
+on:
+  repository_dispatch:
+    types: [update-tap] # with client_payload.packages
+  workflow_dispatch:
+    inputs:
+      sha256_linux:
+        required: true
+        default: ''
+      sha256_macos:
+        required: true
+        default: ''
+      version:
+        required: true
+        default: ''
+
+jobs:
+  update-tap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update formula
+        shell: bash
+        run: |
+          sed \
+          -e 's/{{ version }}/${{ github.event.client_payload.version }}/g' \
+          -e 's/{{ sha256_linux }}/${{ github.event.client_payload.sha256_linux }}/g' \
+          -e 's/{{ sha256_macos }}/${{ github.event.client_payload.sha256_macos }}/g' \
+          fluttergen_template.rb
