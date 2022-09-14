@@ -33,7 +33,15 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT_FLUTTERGEN }}
-          commit-message: "feat: update"
+          commit-message: "feat: bump up to ${{ github.event.client_payload.version }}"
           branch: update-tap
           delete-branch: true
-          title: "feat: update"
+          title: "feat: bump up to ${{ github.event.client_payload.version }}"
+          
+      #- name: Enable Pull Request Automerge
+      #  if: steps.cpr.outputs.pull-request-operation == 'created'
+      #  uses: peter-evans/enable-pull-request-automerge@v2
+      #  with:
+      #    token: ${{ secrets.PAT_FLUTTERGEN }}
+      #    pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+      #    merge-method: squash
