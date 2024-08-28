@@ -32,7 +32,7 @@ jobs:
           -e 's/{{ sha256_macos }}/${{ github.event.client_payload.sha256_macos }}/g' \
           fluttergen_template.rb > Formula/fluttergen.rb
 
-      # GitHub Apps でトークンを取得する
+      # GitHub Apps
       - name: Generate github apps token
         id: app-token
         uses: actions/create-github-app-token@v1
